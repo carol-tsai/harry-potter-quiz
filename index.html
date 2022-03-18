@@ -5,7 +5,7 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-   <title>Coding Quiz</title>
+   <title>Harry Potter Quiz</title>
    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -16,7 +16,18 @@
       <button id="start">Start Quiz</button>
    </section>
 
-   <section id="quiz"></section>
+   <section id="quiz" style="display: none;">
+      <p id="timer"></p>
+      <section class="question" id="question1">
+         <h2>Who is the author of the Harry Potter books?</h2>
+         <ol>
+            <li><button>C.S. Lewis</button></li>
+            <li><button>J.K. Rowling</button></li>
+            <li><button>J.R.R. Tolkein</button></li>
+            <li><button>Rick Riordan</button></li>
+         </ol>
+      </section>
+   </section>
 
    <script src="./assets/js/script.js"></script>
 </body>
