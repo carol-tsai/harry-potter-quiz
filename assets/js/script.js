@@ -4,7 +4,7 @@ var firstPg = document.querySelector("#first-page");
 var quiz = document.querySelector("#quiz");
 var timer = document.querySelector("#timer");
 
-var secondsLeft = 5;
+var secondsLeft = 30;
 var questions = [
    {
       question: "Who is the author of the Harry Potter books?",
@@ -12,7 +12,7 @@ var questions = [
    },
    {
       question: "Where does Harry go to school?",
-      choices: ["Princeton", "Oxford", "Hogwarts", "Yale"]
+      choices: ["Princeton", "Oxford", "Hogwarts", "Eton"]
    },
    {
       question: "What is the name of Harry's owl?",
@@ -47,6 +47,11 @@ function showQuestion() {
       choice.textContent = questions[questionPos].choices[i];
       // TODO add event listener for each button
    }
+   questionPos++;
+}
+
+function nextQuestion() {
+
 }
 
 
@@ -55,6 +60,11 @@ startBtn.addEventListener("click", function () {
    firstPg.setAttribute("style", "display: none;");
    quiz.setAttribute("style", "display: block;");
    showQuestion();
+   console.log(questionPos);
    timer.textContent = "Time: " + secondsLeft;
    setTime();
+   for (i = 0; i < questions[questionPos].choices.length; i++) {
+      var choice = document.getElementById("choice" + i);
+      choice.addEventListener("click", showQuestion);
+   }
 })
