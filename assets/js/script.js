@@ -3,6 +3,7 @@ var startBtn = document.querySelector("#start");
 var firstPg = document.querySelector("#first-page");
 var quiz = document.querySelector("#quiz");
 var timer = document.querySelector("#timer");
+var lastPg = document.querySelector("#ending");
 
 var secondsLeft = 30;
 var questions = [
@@ -51,7 +52,7 @@ function setTime() {
          // Stops execution of action at set interval
          clearInterval(timerInterval);
          // Calls function to create and append image
-         sendMessage(); //Todo change to show end page
+         showEnding(); //Todo change to show end page
       }
 
    }, 1000);
@@ -59,15 +60,16 @@ function setTime() {
 
 function showQuestion() {
    var questionEl = document.getElementById("question-title");
+   if (questionPos >= questions.length) {
+      showEnding();
+      return;
+   }
    questionEl.textContent = questions[questionPos].question;
    for (i=0;i < questions[questionPos].choices.length; i++) {
       var choice = document.getElementById("choice" + i);
       choice.textContent = questions[questionPos].choices[i];
-      // TODO add event listener for each button
    }
-   if (questionPos>questions.length) {
-      // Todo take people to ending page
-   }
+
 }
 
 function nextQuestion(event) {
@@ -78,6 +80,12 @@ function nextQuestion(event) {
    }
    questionPos++;
    showQuestion();
+}
+
+function showEnding() {
+   console.log(lastPg);
+   lastPg.setAttribute("style", "display: block;");
+   quiz.setAttribute("style", "display: none;");
 }
 
 
