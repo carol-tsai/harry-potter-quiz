@@ -11,8 +11,8 @@
 
 <body>
    <section id="first-page">
-      <h1>Harry Potter Quiz</h1>
-      <p>Try to answer the following questions as quickly as possible.</p>
+      <h1>Harry Potter Quiz 🪄</h1>
+      <p>Test your knowledge of the wizarding world by asnwering these questions as fast as possible. If you get a question wrong then 5 seconds will be subtracted from your remaining time. You will have at most 30 seconds to answer these 6 questions.</p>
       <button id="start">Start Quiz</button>
    </section>
 
@@ -33,7 +33,18 @@
    <section id="ending" style="display: none;">
       <h2>All done!</h2>
       <p id="score"></p>
+      <form id="score-form">
+         <label for="initials">Enter Initials:</label><br>
+         <input type="text" id="initials" name="initals"><br>
+      </form>
 
+   </section>
+
+   <section id="score-page" style="display: none;">
+      <h2>Saved Scores</h2>
+      <ol id="highscores"></ol>
+      <button id="back-btn">Go Back</button>
+      <button id="clear-btn">Clear Scores</button>
    </section>
 
 
