@@ -142,7 +142,7 @@ function submitScore(event) {
    event.preventDefault();
    var inputText = initials.value.trim();
    var toSave = inputText + " - " + secondsLeft;
-   console.log(toSave);
+   console.log(highscores);
    highscores.push(toSave);
    initials.value = ""
    storeScore();
