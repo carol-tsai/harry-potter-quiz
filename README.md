@@ -9,36 +9,22 @@ In the process of creating this project I learned to write HTML dynamically usin
 
 ## Usage
 
-The webpage can be found at [this link](https://carol-tsai.github.io/password-generator/)
+The webpage can be found at [this link](https://carol-tsai.github.io/harry-potter-quiz/)
 
-To generate a password, click the red "Generat Password" button.
-![Screenshot with blue box around red button that says "Generate"](assets/images/button.png)
-
-The window will then prompt you to input the desired length for your password. Type in that number and click "Ok". The password length must be at least 8 characters long and no longer than 128 characters.
-
-![Screenshot with window prompt saying "How many characters would you like your password to contain"](assets/images/length.png)
-
-The window will then ask you if you want to include different character types (special characters, numbers, lower case letter, and upper case characters). Click "Ok" for yes and "Cancel for no".
-
-![Screenshot with window prompt saying "Would you like to include special characters"](assets/images/characters.png)
-
-After answering the prompts, a secure and unique password will be generated and displayed in the output box.
-
-![Screenshot of a password generator with a randomly generated password"](assets/images/output.png)
 
 ## Credits
 
-Code for the index.html and stylesheet files was copied from UPenn LPS Coding Bootcamp course material.
+Cirriculum and materials for the UPenn LPS Coding Bootcamp was referenced in the creation of this application.
 
 ### Reference documents
 
-* [MDN Web Docs on window.alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert)
+* [MDN Web Docs on addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 
-* [MDN Web Docs on window.confirm()](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm)
+* [MDN Web Docs on window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
-* [MDN Web Docs on window.prompt()](https://developer.mozilla.org/en-US/docs/Web/API/Window/prompt)
+* [MDN Web Docs on setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setInterval)
 
-* [MDN Web Docs on Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+* [MDN Web Docs on clearInterval()](https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/clearInterval)
 
 
 ## How to Contribute

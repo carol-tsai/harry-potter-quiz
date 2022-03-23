@@ -140,11 +140,12 @@ function showHighscores() {
 
 }
 
-// When the initials are submitted, save the initials and score as an item on the highscores array/
+// When the initials are submitted, save the initials and score as an item on the highscores array.
 function submitScore(event) {
    event.preventDefault();
    var inputText = initials.value.trim();
    var toSave = inputText + " - " + secondsLeft;
+   console.log(toSave);
    highscores.push(toSave);
    initials.value = ""
    storeScore();
