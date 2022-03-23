@@ -48,7 +48,7 @@ var questions = [
    }
 ];
 var questionPos = 0;
-var highscores = JSON.parse(localStorage.getItem("highscores"));
+var highscores = [];
 var timerInterval;
 
 // Functions
@@ -126,10 +126,7 @@ function showHighscores() {
    endPg.setAttribute("style", "display: none;");
    scorePgEl.setAttribute("style", "display: block");
    highscoresEl.innerHTML = "";
-   var storedScores = JSON.parse(localStorage.getItem("highscores"));
-   if (storedScores != null) {
-      highscores = storedScores;
-   }
+   fetchScores();
    for (i = 0; i < highscores.length; i++) {
       var li = document.createElement("li");
       li.textContent = highscores[i];
@@ -156,6 +153,17 @@ function submitScore(event) {
 function storeScore() {
    localStorage.setItem("highscores", JSON.stringify(highscores));
 }
+
+function fetchScores() {
+   var storedScores = JSON.parse(localStorage.getItem("highscores"));
+   if (storedScores !== null) {
+      highscores = storedScores;
+   }
+   console.log(highscores);
+}
+
+// Fetch any scores from localStorage
+fetchScores();
 
 // When start button is clicked, timer starts and a question in presented. When an answer is clicked, another question is displayed
 startBtn.addEventListener("click", function () {

@@ -11,6 +11,18 @@ In the process of creating this project I learned to write HTML dynamically usin
 
 The webpage can be found at [this link](https://carol-tsai.github.io/harry-potter-quiz/)
 
+When you arrive at this page, there will be some basic instructions. Read them thoroughly and click start quiz when you are ready to begin. The timer will begin once you click start.
+
+![Screenshot of Harry Potter Quiz](assets/images/start.png)
+
+Once the quiz starts, answer the questions as quickly as possible in order to get the highest score. When you are done, you will be prompted to save your score by entering your iniitals.
+
+![Screenshot of page that says "All done! Your final score is 10"](assets/images/save.png)
+
+Your score will be saved in local storage so that when you leave this page and return, your score will be saved.
+
+![Screenshot of saved scores](assets/images/scores.png)
+
 
 ## Credits
 
