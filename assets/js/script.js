@@ -12,6 +12,7 @@ var initials = document.querySelector("#initials");
 var highscoresEl = document.querySelector("#highscores")
 var clearBtnEl = document.querySelector("#clear-btn");
 var backBtnEl = document.querySelector("#back-btn");
+var isCorrectEl = document.querySelector('#is-correct');
 
 // Global variables
 var secondsLeft = 30;
@@ -67,6 +68,15 @@ function setTime() {
    }, 1000);
 }
 
+function hideIfCorrect() {
+   correctInterval = setInterval(function () {
+      isCorrectEl.textContent = "";
+      clearInterval(correctInterval)
+
+   }, 1500);
+}
+
+
 // Update quiz questions to show the next question in the questions array.
 function showQuestion() {
    var questionEl = document.getElementById("question-title");
@@ -87,13 +97,17 @@ function nextQuestion(event) {
    var answer = event.target;
    var correct = questions[questionPos].correct;
    if (answer.textContent != correct) {
+      isCorrectEl.textContent = "Wrong answer"
       if (secondsLeft >= 5) {
          secondsLeft -= 5;
       } else {
          secondsLeft = 0;
          showEnding();
       }
+   } else {
+      isCorrectEl.textContent = "Correct!"
    }
+   hideIfCorrect();
    questionPos++;
    showQuestion();
 }
