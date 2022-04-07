@@ -13,6 +13,7 @@ var highscoresEl = document.querySelector("#highscores")
 var clearBtnEl = document.querySelector("#clear-btn");
 var backBtnEl = document.querySelector("#back-btn");
 var isCorrectEl = document.querySelector('#is-correct');
+var viewScoresEl = document.querySelector('#view-scores');
 
 // Global variables
 var secondsLeft = 30;
@@ -68,6 +69,7 @@ function setTime() {
    }, 1000);
 }
 
+// Hides the correct or wrong and shows the next question
 function hideIfCorrect() {
    correctInterval = setInterval(function () {
       isCorrectEl.textContent = "";
@@ -110,8 +112,6 @@ function nextQuestion(event) {
       isCorrectEl.textContent = "Correct!"
    }
    hideIfCorrect();
-   //questionPos++;
-   //showQuestion();
 }
 
 // Show ending page and hide quiz, allow player to save their score
@@ -140,6 +140,8 @@ function showFirstPg() {
 // Show the score page, hide the end page, and update the text of the highscores.
 function showHighscores() {
    endPg.setAttribute("style", "display: none;");
+   firstPg.setAttribute("style", "display: none;");
+   quiz.setAttribute("style", "display: none;");
    scorePgEl.setAttribute("style", "display: block");
    highscoresEl.innerHTML = "";
    fetchScores();
@@ -194,3 +196,5 @@ startBtn.addEventListener("click", function () {
       choice.addEventListener("click", nextQuestion);
    }
 })
+
+viewScoresEl.addEventListener("click", showHighscores);
