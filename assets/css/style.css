@@ -30,3 +30,8 @@ li {
    width: 30%;
 }
 
+#is-correct {
+   font-style: italic;
+   color: gray;
+}
+

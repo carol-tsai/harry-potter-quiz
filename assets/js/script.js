@@ -71,9 +71,11 @@ function setTime() {
 function hideIfCorrect() {
    correctInterval = setInterval(function () {
       isCorrectEl.textContent = "";
+      questionPos++;
+      showQuestion();
       clearInterval(correctInterval)
 
-   }, 1500);
+   }, 800);
 }
 
 
@@ -108,8 +110,8 @@ function nextQuestion(event) {
       isCorrectEl.textContent = "Correct!"
    }
    hideIfCorrect();
-   questionPos++;
-   showQuestion();
+   //questionPos++;
+   //showQuestion();
 }
 
 // Show ending page and hide quiz, allow player to save their score
